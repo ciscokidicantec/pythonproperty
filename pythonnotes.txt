@@ -2,6 +2,13 @@ General Pip Commands
 
 Corey Schifer
 
+to create a new virtual environment call pythonproperty from terminal
+python -m venv property 
+property/scripts/activate
+
+to upgrade pip to a new version use terminal with the following
+C:\pythonestate\property\Scripts\python.exe -m pip install --upgrade pip
+
 pip list
 pip freeze > requirements.txt
 pip install -r requirements.txt
