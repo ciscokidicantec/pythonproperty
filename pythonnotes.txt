@@ -9,3 +9,5 @@ pip list --outdated
 removing environment
 deactivate
 rm -rf [environment name]
+
+name of github repository is pythonproperty
