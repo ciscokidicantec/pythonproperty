@@ -2,6 +2,9 @@
 #Trying to add files to github
 ############
 #github should be working
+#Use environment estate this can be activated by estate/scripts/activate using the terminl command
+#line
+
 
 import sys
 import mysql.connector
