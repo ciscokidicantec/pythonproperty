@@ -11,4 +11,4 @@ deactivate
 rm -rf [environment name]
 
 name of github repository is pythonproperty
-need to learn github better
+need to learn github better especially if push is required
