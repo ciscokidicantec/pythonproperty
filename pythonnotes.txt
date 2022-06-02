@@ -1,0 +1,11 @@
+General Pip Commands
+
+Corey Schifer
+
+pip list
+pip freeze > requirements.txt
+pip install -r requirements.txt
+pip list --outdated
+removing environment
+deactivate
+rm -rf [environment name]
