@@ -1,0 +1,77 @@
+<html>
+<head>
+
+</head>
+<body>
+
+Start of program with a name
+
+
+
+<br/>
+<br/>
+
+<div id ="jstr" >
+    {{jsonrow}}
+</div>
+
+{{myresult}}
+
+{{name}}
+
+{{new_year}}
+
+<input type="button" onclick='addimg();' id="pictfunc" value="Click Me To Enter addimg"/>
+
+
+</body> 
+
+<script type="text/javascript" >
+
+function addimg(){
+
+    
+    alert("Hello\nHow are you?");
+    
+    var sqq = document.getElementById("jstr").innerHTML;
+    console.log(sqq);    
+
+    const objjson = JSON.parse(sqq);
+
+    console.log("access JSON GIVES ME an ID = ",objjson[0].id);
+    console.log("access JSON GIVES ME Name = ",objjson[0].name);
+    console.log("access JSON Date And Time GIVES ME = ",objjson[0].mydt);
+    console.log("access JSON GIVES ME = ",objjson[0].price);
+    console.log("access JSON GIVES ME = ",objjson[0].address);
+    console.log("access JSON GIVES ME = ",objjson[0].imagepath);
+    console.log("access JSON GIVES ME = ",objjson[0].estatedes);
+    console.log("access JSON GIVES ME = ",objjson[0].fulldes);
+    console.log("access JSON GIVES ME = ",objjson[0].lastupdated);
+    console.log("access JSON GIVES ME = ",objjson[0].lcount);
+
+    console.log("access JSON GIVES ME = ",objjson[1].id);
+    console.log("access JSON GIVES ME = ",objjson[1].name);
+    console.log("access JSON GIVES ME = ",objjson[1].price);
+    console.log("access JSON GIVES ME = ",objjson[1].address);
+    console.log("access JSON GIVES ME = ",objjson[1].imagepath);
+    console.log("access JSON GIVES ME = ",objjson[1].estatedes);
+    console.log("access JSON GIVES ME = ",objjson[1].fulldes);
+    console.log("access JSON GIVES ME = ",objjson[1].lastupdated);
+    console.log("access JSON GIVES ME = ",objjson[1].lcount);
+
+
+
+    console.log("access JSON GIVES ME = ",objjson[3].id);
+    console.log("access JSON GIVES ME = ",objjson[3].name);
+    console.log("access JSON GIVES ME = ",objjson[3].price);
+    console.log("access JSON GIVES ME = ",objjson[3].address);
+    console.log("access JSON GIVES ME = ",objjson[3].imagepath);
+    console.log("access JSON GIVES ME = ",objjson[3].estatedes);
+    console.log("access JSON GIVES ME = ",objjson[3].fulldes);
+    console.log("access JSON GIVES ME = ",objjson[3].lastupdated);
+    console.log("access JSON GIVES ME = ",objjson[3].lcount);
+}
+  
+</script>
+
+</html>

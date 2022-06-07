@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pass Python variable to Javascript</title>
+</head>
+<body>
+
+Database Using javascript
+
+<br/>
+<br/>
+
+
+<!--<div id="db" style="visibility:hidden"> -->
+<div id="db">
+    {{returndictrow}}
+</div>
+
+<script>
+
+    alert("Into javascript");
+    var test = document.getElementById("db").innerHTML;
+    alert("Into dictionery  ", test);
+
+
+
+
+//alert({{returndictrow}});
+    //var test = document.getElementById("db").value;
+    //console.print("here are the test results    ",test);
+    //var conjson = test | tojson;
+    //var test = {{ returndictrow | tojson }};
+    //var selectvalue = document.getElementById("db"), test = {{ returndictrow | tojson }};
+    //var selectvalue = document.getElementById({{"returndictrow"}}).value;
+
+    //var test = {{returndictrow}};
+    //console.print(test);
+</script>
+
+</body>
+
+
+
+
+
+
+</html>

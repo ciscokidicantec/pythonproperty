@@ -15,7 +15,7 @@ pip install -r requirements.txt
 pip list --outdated
 removing environment
 deactivate
-rm -rf [environment name]
+rm -r [environment name]
 
 name of github repository is pythonproperty
 need to learn github better especially if push is required
