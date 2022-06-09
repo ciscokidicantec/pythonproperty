@@ -2,6 +2,7 @@
 import decimal
 from decimal import Decimal
 
+
 import logging
 
 import simplejson as json
