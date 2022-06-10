@@ -143,7 +143,7 @@ def j():
         mydbtbjoin.commit()
      #   mydbtb.close()
 
-        mydbtbselectconn = mysql.connector.connect(host="localhost",user="root",password="Coreldraw1$",database="mymariodatabase")
+        mydbtbselectconn = mysql.connector.connect(host="localhost",auth_plugin='mysql_native_password',user="root",password="Coreldraw1$",database="mymariodatabase")
         mycursor = mydbtbselectconn.cursor()
         #    sql_select_Query = mycursor.execute("SELECT * FROM customers")
         #sql_select_Query = mycursor.execute("SELECT name, address, picturpath, idforeign, price FROM customers")
