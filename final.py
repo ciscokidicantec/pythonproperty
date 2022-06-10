@@ -72,11 +72,11 @@ def j():
 
     try:
 
-        mydb = mysql.connector.connect(host="localhost",user="root",password="Coreldraw1$")
+        mydb = mysql.connector.connect(host="localhost",auth_plugin='mysql_native_password',user="root",password="Coreldraw1$")
         mycursor = mydb.cursor()
         mycursor.execute("CREATE DATABASE IF NOT EXISTS mymariodatabase")
 
-        mydbtb = mysql.connector.connect(host="localhost",user="root",password="Coreldraw1$",database="mymariodatabase")
+        mydbtb = mysql.connector.connect(host="localhost",auth_plugin='mysql_native_password',user="root",password="Coreldraw1$",database="mymariodatabase")
         mycursor1 = mydbtb.cursor()
 
         dropsqlcustomersjoin = "DROP TABLE IF EXISTS customersjoin"
@@ -113,7 +113,7 @@ def j():
 
         mydbtb.commit()
 
-        mydbtbjoin = mysql.connector.connect(host="localhost",user="root",password="Coreldraw1$",database="mymariodatabase")
+        mydbtbjoin = mysql.connector.connect(host="localhost",auth_plugin='mysql_native_password',user="root",password="Coreldraw1$",database="mymariodatabase")
         mycursorjoin = mydbtbjoin.cursor()
         mycursorjoin.execute("CREATE TABLE imagesjoin(idmyimages INT PRIMARY KEY, estatelink INT, imagepath VARCHAR(255))")
 
