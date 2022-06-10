@@ -39,7 +39,7 @@ from tkinter.filedialog import askopenfilename
 
 
 
-from flask_wtf import FlaskForm
+#from flask_wtf import FlaskForm
 from flask import Flask,redirect,url_for,render_template,request
 
 #app=Flask(__name__)
