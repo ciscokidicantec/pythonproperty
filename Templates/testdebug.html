@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pass Python variable to Javascript</title>
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="kgvode" >
+    <meta http-equiv="X-VA-Compatible" content="ie=edge" >
+-->    
+<!--   <link rel="stylesheet" href="/static/estate.css"> -->
+</head>
+
+<body>
+
+    <div id="jsondiv">
+
+        {{stud_json}}
+
+    </div>
+   
+    <button onclick="checkjs()">Click me</button>
+
+<script>
+    function checkjs(){
+
+        jsonvalue = document.getElementById("jsondiv").innerHTML;
+        console.log(jsonvalue);
+
+        jsarray = JSON.parse(jsonvalue);
+        console.log(jsarray);
+
+        console.log("Using 2 dimensional scheme for name = " + jsarray[0]["name"]);
+        console.log("Using 2 dimensional scheme for name = " + jsarray[1]["name"]);
+        console.log("Using 2 dimensional scheme for name = " + jsarray[2]["name"]);
+        console.log("Using 2 dimensional scheme for name = " + jsarray[3]["name"]);
+        console.log("Using 2 dimensional scheme for name = " + jsarray[4]["name"]);
+
+
+        for(let loop = 0; loop<jsarray.length; loop++ ){
+            console.log("Iside Outer loop show name = " + jsarray[loop]["name"]);
+            console.log("Iside Outer loop show name = " + jsarray[loop]["address"]);
+            console.log("Iside Outer loop show name = " + jsarray[loop]["price"]);
+            console.log("Iside Outer loop show name = " + jsarray[loop]["imagepath"]);
+
+
+ //           let innerArrayLength = jsarray[loop].length;
+ //           for (let j = 0; j < innerArrayLength; j++) {
+ //               console.log('[' + loop + ',' + j + '] = ' + jsarray[loop][j]);
+ //           }
+        }
+
+        let x = 1;
+        return x;
+
+    }
+
+
+</script>
+
+</body>
+<html>

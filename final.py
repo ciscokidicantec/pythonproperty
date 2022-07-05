@@ -144,7 +144,8 @@ def j():
      #   mydbtb.close()
 
         mydbtbselectconn = mysql.connector.connect(host="localhost",auth_plugin='mysql_native_password',user="root",password="Coreldraw1$",database="mymariodatabase")
-        mycursor = mydbtbselectconn.cursor()
+        #mycursor = mydbtbselectconn.cursor()
+        mycursor = mydbtbselectconn.cursor(dictionary=True)
         #    sql_select_Query = mycursor.execute("SELECT * FROM customers")
         #sql_select_Query = mycursor.execute("SELECT name, address, picturpath, idforeign, price FROM customers")
 
@@ -172,11 +173,17 @@ def j():
 
 
     jsontuplelist = json.dumps(rowreturn)
+
+    #this save the json in a file so needs fp:
+    #nonstring = json.dump(rowreturn)
+
+
    # r = json.dumps(jsontuplelist)
 
     print(jsontuplelist)
 
-    return render_template('joinedimages.html', stud_json=jsontuplelist)
+    return render_template('testdebug.html', stud_json=jsontuplelist)
+    #return render_template('joinedimages.html', stud_json=jsontuplelist)
     #return render_template('joinedimages.html')    
 
 
