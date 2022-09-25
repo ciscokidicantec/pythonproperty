@@ -18,8 +18,12 @@
         {{stud_json}}
 
     </div>
-   
+
     <button onclick="checkjs()">Click me</button>
+
+    <div id="x">
+    
+    </div>
 
 <script>
     function checkjs(){
@@ -50,9 +54,25 @@
  //           }
         }
 
-        let x = 1;
-        return x;
-
+        for(i = 0; i < jsarray.length; i++) {
+            console.log("Name = " + jsarray[i]["name"] + " Address = " + jsarray[i]["address"] + " Json image path = " + jsarray[i]["imagepath"] + "  Foreign Key = " + jsarray[i]["estatelink"] + "  Price = £" + jsarray[i]["price"] + " ID = " + jsarray[i]["id"] + "  Market Date = " + jsarray[i]["onmarketdate"]);
+            let img = document.createElement("img");
+            img.src = jsarray[i]["imagepath"];
+            //img.alt = "£" + myjson[i]["price"];
+            img.width = "250";
+            let div = document.getElementById("x");
+            div.appendChild(img);
+            let h1 = document.createElement("h1");
+            h1.innerText = "£" + jsarray[i]["price"];
+            div.appendChild(h1);
+            let h2 = document.createElement("h1");
+            h2.innerText = jsarray[i]["name"];
+            div.appendChild(h1);
+            let h3 = document.createElement("h1");
+            let underline = document.createElement("u");
+            underline.innerText = jsarray[i]["address"];
+            div.appendChild(underline);
+        }
     }
 
 
